@@ -11,5 +11,7 @@ class Post(models.Model):
 
     author = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    objects = models.Manager() 
+
     def __str__(self): # 객체를 문자로 바꿨을때 어떻게 표현해야하는지 나타내주는 함수
         return '{} :: {}.'.format(self.title, self.author) #title, author 나오게
