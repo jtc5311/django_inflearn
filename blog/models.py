@@ -9,6 +9,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = 'categories' # admin에서 categorys 수정
+
 
 class Post(models.Model):
     title = models.CharField(max_length=30)
